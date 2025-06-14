@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Speech ↔ Text Web Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center py-10 px-4">
+    <div class="max-w-xl w-full bg-white rounded-2xl shadow-lg p-6 space-y-8">
+        <h1 class="text-3xl font-bold text-center text-blue-600">Speech ↔ Text Tool</h1>
+
+        <!-- Text to Speech -->
+        <div>
+            <h2 class="text-xl font-semibold mb-2">📢 Text to Speech</h2>
+            <textarea id="text-input" rows="3" class="w-full p-2 border rounded"></textarea>
+            <button onclick="convertTextToSpeech()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Speak</button>
+        </div>
+
+        <!-- Speech to Text -->
+        <div>
+            <h2 class="text-xl font-semibold mb-2">🎙️ Speech to Text</h2>
+            <button onclick="startSpeechToText()" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Start Speaking</button>
+            <p id="speech-result" class="mt-2 text-gray-700"></p>
+        </div>
+
+        <!-- Image to Speech -->
+        <div>
+            <h2 class="text-xl font-semibold mb-2">🖼️ Image to Speech</h2>
+            <input type="file" id="image-input" class="w-full border p-2 rounded">
+            <button onclick="uploadImage()" class="mt-2 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">Extract & Speak</button>
+            <p id="image-text" class="mt-2 text-gray-700"></p>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

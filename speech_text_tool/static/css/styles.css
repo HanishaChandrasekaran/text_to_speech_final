@@ -1,0 +1,42 @@
+/* Fade-in animation for containers */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .container {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  /* Button glow effect */
+  button {
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Textarea & file input focus styling */
+  textarea:focus,
+  input[type="file"]:focus {
+    outline: none;
+    border-color: #3b82f6; /* Tailwind blue-500 */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  /* Speech result and image text area styling */
+  #speech-result,
+  #image-text {
+    background-color: #f1f5f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    white-space: pre-wrap;
+  }
+  
